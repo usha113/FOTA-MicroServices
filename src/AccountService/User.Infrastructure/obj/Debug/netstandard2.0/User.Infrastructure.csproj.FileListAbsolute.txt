@@ -1,0 +1,12 @@
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\bin\Debug\netstandard2.0\User.Infrastructure.deps.json
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\bin\Debug\netstandard2.0\User.Infrastructure.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\bin\Debug\netstandard2.0\User.Infrastructure.pdb
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\obj\Debug\netstandard2.0\User.Infrastructure.csprojAssemblyReference.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\obj\Debug\netstandard2.0\User.Infrastructure.AssemblyInfoInputs.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\obj\Debug\netstandard2.0\User.Infrastructure.AssemblyInfo.cs
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\obj\Debug\netstandard2.0\User.Infrastructure.csproj.CoreCompileInputs.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\obj\Debug\netstandard2.0\User.Infrastructure.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\obj\Debug\netstandard2.0\User.Infrastructure.pdb
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\bin\Debug\netstandard2.0\User.Core.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\bin\Debug\netstandard2.0\User.Core.pdb
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Infrastructure\obj\Debug\netstandard2.0\User.Infrastructure.csproj.CopyComplete

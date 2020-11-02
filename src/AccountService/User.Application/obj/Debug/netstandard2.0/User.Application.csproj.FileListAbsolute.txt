@@ -1,0 +1,14 @@
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\bin\Debug\netstandard2.0\User.Application.deps.json
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\bin\Debug\netstandard2.0\User.Application.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\bin\Debug\netstandard2.0\User.Application.pdb
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\obj\Debug\netstandard2.0\User.Application.csprojAssemblyReference.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\obj\Debug\netstandard2.0\User.Application.AssemblyInfoInputs.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\obj\Debug\netstandard2.0\User.Application.AssemblyInfo.cs
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\obj\Debug\netstandard2.0\User.Application.csproj.CoreCompileInputs.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\obj\Debug\netstandard2.0\User.Application.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\obj\Debug\netstandard2.0\User.Application.pdb
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\bin\Debug\netstandard2.0\User.Core.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\bin\Debug\netstandard2.0\User.Infrastructure.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\bin\Debug\netstandard2.0\User.Core.pdb
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\bin\Debug\netstandard2.0\User.Infrastructure.pdb
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Application\obj\Debug\netstandard2.0\User.Application.csproj.CopyComplete

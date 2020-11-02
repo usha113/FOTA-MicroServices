@@ -1,0 +1,9 @@
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.Core\bin\Debug\netstandard2.0\Campaign.Core.deps.json
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.Core\bin\Debug\netstandard2.0\Campaign.Core.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.Core\bin\Debug\netstandard2.0\Campaign.Core.pdb
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.Core\obj\Debug\netstandard2.0\Campaign.Core.csprojAssemblyReference.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.Core\obj\Debug\netstandard2.0\Campaign.Core.AssemblyInfoInputs.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.Core\obj\Debug\netstandard2.0\Campaign.Core.AssemblyInfo.cs
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.Core\obj\Debug\netstandard2.0\Campaign.Core.csproj.CoreCompileInputs.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.Core\obj\Debug\netstandard2.0\Campaign.Core.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.Core\obj\Debug\netstandard2.0\Campaign.Core.pdb

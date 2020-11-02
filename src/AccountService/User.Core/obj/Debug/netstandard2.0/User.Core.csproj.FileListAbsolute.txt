@@ -1,0 +1,9 @@
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Core\obj\Debug\netstandard2.0\User.Core.csprojAssemblyReference.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Core\obj\Debug\netstandard2.0\User.Core.AssemblyInfoInputs.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Core\obj\Debug\netstandard2.0\User.Core.AssemblyInfo.cs
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Core\obj\Debug\netstandard2.0\User.Core.csproj.CoreCompileInputs.cache
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Core\bin\Debug\netstandard2.0\User.Core.deps.json
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Core\bin\Debug\netstandard2.0\User.Core.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Core\bin\Debug\netstandard2.0\User.Core.pdb
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Core\obj\Debug\netstandard2.0\User.Core.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\AccountService\User.Core\obj\Debug\netstandard2.0\User.Core.pdb
