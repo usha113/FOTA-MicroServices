@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Campaign.Infrastructure.Data;
-
+using Newtonsoft.Json;
 using Campaign.Infrastructure.Repositories;
 using Campaign.Core.Repositories;
 using Campaign.Core.Repositories.Base;
@@ -29,12 +29,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
-using Newtonsoft.Json;
+
 using Campaign.Core.Entities;
-
-//using Campaign.Infrastructure.Helper;
-
 using Microsoft.AspNetCore.HttpOverrides;
+using Campaign.Application.Helper;
+//using Campaign.Infrastructure.Services;
+//using Campaign.Core.Services;
+using Amazon.S3;
 
 namespace Campaign.API
 {
@@ -52,8 +53,16 @@ namespace Campaign.API
         {
                services.AddControllers();
                services.AddDbContext<CampaignContext>(p=>p.UseNpgsql(Configuration.GetConnectionString("DataAccessPostgreSqlProvider")),ServiceLifetime.Singleton);
-            
-            
+
+             // services.AddSingleton<IS3Service,S3Service>();
+              //services.AddAWSService<IAmazonS3>();
+            #region MVC
+            services.AddMvc()
+             .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+             .AddNewtonsoftJson(options => { options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore; });
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            #endregion
+
 
             services.AddAutoMapper(typeof(Startup));
              services.AddMediatR(typeof(InitiateCampaignHandler).GetTypeInfo().Assembly);
@@ -62,16 +71,21 @@ namespace Campaign.API
              services.AddMediatR(typeof(RejectCampaignHandler).GetTypeInfo().Assembly);
              services.AddMediatR(typeof(GetCampaignsHandler).GetTypeInfo().Assembly);
              services.AddMediatR(typeof(GetCampaignByIdHandler).GetTypeInfo().Assembly);
+             services.AddMediatR(typeof(EmployeeHandler).GetTypeInfo().Assembly);
 
-           
+
             services.AddTransient<ICampaignRepository,CampaignRepository>();
             services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
             services.AddScoped(typeof(ICampaignRepository),typeof(CampaignRepository));
 
 
+
+services.AddTransient<IEmployeeRepository,EmployeeRepository>();
+            services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
+            services.AddScoped(typeof(IEmployeeRepository),typeof(EmployeeRepository));
             // // #region JWT Authentication
             //  var appSettingsSection = Configuration.GetSection("AppSettings");
-            
+
 
             // services.Configure<ApplicationSettings>(appSettingsSection);
             // //configure jwt authentication
@@ -95,7 +109,7 @@ namespace Campaign.API
             //         ValidateAudience = false
             //     };
             // });
-            
+
 
              #region CORS
             services.AddCors(options =>
@@ -107,25 +121,25 @@ namespace Campaign.API
                     .Build());
             });
             #endregion
-            //  #region Email Configuration
-            // var emailSection = Configuration.GetSection("EmailSettings");
-            // services.Configure<EmailSettings>(emailSection);
-            // var emailSettings = emailSection.Get<EmailSettings>();
-            // services.AddScoped<SmtpClient>((serviceProvider) =>
-            // {
-            //     return new SmtpClient()
-            //     {
-            //         Host = emailSettings.Host,
-            //         Port = int.Parse(emailSettings.Port)
-            //     };
-            // });
-            // services.AddTransient<IEmailHelper, EmailHelper>();
-            // #endregion
+              #region Email Configuration
+             var emailSection = Configuration.GetSection("EmailSettings");
+             services.Configure<EmailSettings>(emailSection);
+             var emailSettings = emailSection.Get<EmailSettings>();
+             services.AddScoped<SmtpClient>((serviceProvider) =>
+             {
+                 return new SmtpClient()
+                 {
+                     Host = emailSettings.Host,
+                     Port = int.Parse(emailSettings.Port)
+                 };
+             });
+             services.AddTransient<IEmailHelper, EmailHelper>();
+             #endregion
 
-           
+
             services.AddOptions();
-            
-            
+
+
             services.AddSwaggerGen( c =>
             {
                 c.SwaggerDoc("v1",new OpenApiInfo { Title="Campaign API",Version="v1"});

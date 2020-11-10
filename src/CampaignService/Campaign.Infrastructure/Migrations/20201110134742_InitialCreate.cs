@@ -14,10 +14,10 @@ namespace Campaign.Infrastructure.Migrations
                 {
                     approver_id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
-                    CreatedBy = table.Column<long>(nullable: true),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    LastModifiedBy = table.Column<long>(nullable: true),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
+                    created_by = table.Column<string>(nullable: true),
+                    created_on = table.Column<DateTime>(nullable: false),
+                    last_modified_by = table.Column<string>(nullable: true),
+                    modified_on = table.Column<DateTime>(nullable: false),
                     approver_name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -31,10 +31,10 @@ namespace Campaign.Infrastructure.Migrations
                 {
                     ecu_type_id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
-                    CreatedBy = table.Column<long>(nullable: true),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    LastModifiedBy = table.Column<long>(nullable: true),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
+                    created_by = table.Column<string>(nullable: true),
+                    created_on = table.Column<DateTime>(nullable: false),
+                    last_modified_by = table.Column<string>(nullable: true),
+                    modified_on = table.Column<DateTime>(nullable: false),
                     ecu_type_name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -43,20 +43,39 @@ namespace Campaign.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "EmployeeModel",
+                columns: table => new
+                {
+                    employee_id = table.Column<long>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
+                    created_by = table.Column<string>(nullable: true),
+                    created_on = table.Column<DateTime>(nullable: false),
+                    last_modified_by = table.Column<string>(nullable: true),
+                    modified_on = table.Column<DateTime>(nullable: false),
+                    employee_name = table.Column<string>(nullable: true),
+                    ImageName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EmployeeModel", x => x.employee_id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Firmware",
                 columns: table => new
                 {
                     firmware_id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
-                    CreatedBy = table.Column<long>(nullable: true),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    LastModifiedBy = table.Column<long>(nullable: true),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
-                    firmware_Name = table.Column<string>(nullable: true),
-                    current_firmware_version = table.Column<string>(nullable: true),
-                    current_firmware_link = table.Column<string>(nullable: true),
-                    previous_firmware_version = table.Column<string>(nullable: true),
-                    previous_firmware_link = table.Column<string>(nullable: true)
+                    created_by = table.Column<string>(nullable: true),
+                    created_on = table.Column<DateTime>(nullable: false),
+                    last_modified_by = table.Column<string>(nullable: true),
+                    modified_on = table.Column<DateTime>(nullable: false),
+                    firmware_name = table.Column<string>(nullable: true),
+                    new_firmware_version = table.Column<string>(nullable: true),
+                    new_firmware_link = table.Column<string>(nullable: true),
+                    old_firmware_version = table.Column<string>(nullable: true),
+                    old_firmware_link = table.Column<string>(nullable: true),
+                    newFirmwareZipName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -69,10 +88,10 @@ namespace Campaign.Infrastructure.Migrations
                 {
                     vehicle_ecu_id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
-                    CreatedBy = table.Column<long>(nullable: true),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    LastModifiedBy = table.Column<long>(nullable: true),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
+                    created_by = table.Column<string>(nullable: true),
+                    created_on = table.Column<DateTime>(nullable: false),
+                    last_modified_by = table.Column<string>(nullable: true),
+                    modified_on = table.Column<DateTime>(nullable: false),
                     ecu_id = table.Column<long>(nullable: false),
                     vehicle_id = table.Column<long>(nullable: false)
                 },
@@ -87,11 +106,11 @@ namespace Campaign.Infrastructure.Migrations
                 {
                     vehiclegroup_id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
-                    CreatedBy = table.Column<long>(nullable: true),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    LastModifiedBy = table.Column<long>(nullable: true),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
-                    VehicleGroupName = table.Column<string>(nullable: true)
+                    created_by = table.Column<string>(nullable: true),
+                    created_on = table.Column<DateTime>(nullable: false),
+                    last_modified_by = table.Column<string>(nullable: true),
+                    modified_on = table.Column<DateTime>(nullable: false),
+                    Vehiclegroup_name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -104,14 +123,13 @@ namespace Campaign.Infrastructure.Migrations
                 {
                     ecu_id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
-                    CreatedBy = table.Column<long>(nullable: true),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    LastModifiedBy = table.Column<long>(nullable: true),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
+                    created_by = table.Column<string>(nullable: true),
+                    created_on = table.Column<DateTime>(nullable: false),
+                    last_modified_by = table.Column<string>(nullable: true),
+                    modified_on = table.Column<DateTime>(nullable: false),
                     ecu_model = table.Column<string>(nullable: true),
-                    ecu_type_id = table.Column<long>(nullable: false),
                     ECUTypeecu_type_id = table.Column<long>(nullable: true),
-                    blocks = table.Column<long>(nullable: true)
+                    blocks = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -130,29 +148,29 @@ namespace Campaign.Infrastructure.Migrations
                 {
                     campaign_id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
-                    CreatedBy = table.Column<long>(nullable: true),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    LastModifiedBy = table.Column<long>(nullable: true),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
+                    created_by = table.Column<string>(nullable: true),
+                    created_on = table.Column<DateTime>(nullable: false),
+                    last_modified_by = table.Column<string>(nullable: true),
+                    modified_on = table.Column<DateTime>(nullable: false),
                     campaign_name = table.Column<string>(nullable: true),
                     campaign_desc = table.Column<string>(nullable: true),
-                    approver_id = table.Column<int>(nullable: false),
-                    approver_id1 = table.Column<long>(nullable: true),
+                    approver_id = table.Column<long>(nullable: true),
                     vehiclegroup_id = table.Column<long>(nullable: true),
                     firmware_id = table.Column<long>(nullable: true),
                     ecu_id = table.Column<long>(nullable: true),
                     campaign_start_date = table.Column<DateTime>(nullable: false),
                     campaign_end_date = table.Column<DateTime>(nullable: false),
-                    is_active = table.Column<short>(nullable: true),
+                    is_active = table.Column<bool>(nullable: false),
                     approval_date = table.Column<DateTime>(nullable: false),
-                    approval_status = table.Column<short>(nullable: true)
+                    approval_status = table.Column<short>(nullable: true),
+                    status = table.Column<short>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Campaign", x => x.campaign_id);
                     table.ForeignKey(
-                        name: "FK_Campaign_Approver_approver_id1",
-                        column: x => x.approver_id1,
+                        name: "FK_Campaign_Approver_approver_id",
+                        column: x => x.approver_id,
                         principalTable: "Approver",
                         principalColumn: "approver_id",
                         onDelete: ReferentialAction.Restrict);
@@ -182,12 +200,12 @@ namespace Campaign.Infrastructure.Migrations
                 {
                     vehicle_id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
-                    CreatedBy = table.Column<long>(nullable: true),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    LastModifiedBy = table.Column<long>(nullable: true),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
+                    created_by = table.Column<string>(nullable: true),
+                    created_on = table.Column<DateTime>(nullable: false),
+                    last_modified_by = table.Column<string>(nullable: true),
+                    modified_on = table.Column<DateTime>(nullable: false),
                     vehicle_model = table.Column<string>(nullable: true),
-                    vehicle_year = table.Column<long>(nullable: false),
+                    vehicle_year = table.Column<int>(nullable: false),
                     vehicle_registration_number = table.Column<string>(nullable: true),
                     data_origin = table.Column<string>(nullable: true),
                     ecu_id = table.Column<long>(nullable: true)
@@ -204,9 +222,9 @@ namespace Campaign.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Campaign_approver_id1",
+                name: "IX_Campaign_approver_id",
                 table: "Campaign",
-                column: "approver_id1");
+                column: "approver_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Campaign_ecu_id",
@@ -238,6 +256,9 @@ namespace Campaign.Infrastructure.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Campaign");
+
+            migrationBuilder.DropTable(
+                name: "EmployeeModel");
 
             migrationBuilder.DropTable(
                 name: "Vehicle");

@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Campaign.Infrastructure.Migrations
 {
     [DbContext(typeof(CampaignContext))]
-    [Migration("20201029083837_InitialCreate")]
+    [Migration("20201110134742_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,20 +28,20 @@ namespace Campaign.Infrastructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<long?>("LastModifiedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("ModifiedOn")
-                        .HasColumnType("timestamp without time zone");
-
                     b.Property<string>("approver_name")
                         .HasColumnType("text");
+
+                    b.Property<string>("created_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("created_on")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("last_modified_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("modified_on")
+                        .HasColumnType("timestamp without time zone");
 
                     b.HasKey("approver_id");
 
@@ -55,28 +55,13 @@ namespace Campaign.Infrastructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<long?>("LastModifiedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("ModifiedOn")
-                        .HasColumnType("timestamp without time zone");
-
                     b.Property<DateTime>("approval_date")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<short?>("approval_status")
                         .HasColumnType("smallint");
 
-                    b.Property<int>("approver_id")
-                        .HasColumnType("integer");
-
-                    b.Property<long?>("approver_id1")
+                    b.Property<long?>("approver_id")
                         .HasColumnType("bigint");
 
                     b.Property<string>("campaign_desc")
@@ -91,13 +76,28 @@ namespace Campaign.Infrastructure.Migrations
                     b.Property<DateTime>("campaign_start_date")
                         .HasColumnType("timestamp without time zone");
 
+                    b.Property<string>("created_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("created_on")
+                        .HasColumnType("timestamp without time zone");
+
                     b.Property<long?>("ecu_id")
                         .HasColumnType("bigint");
 
                     b.Property<long?>("firmware_id")
                         .HasColumnType("bigint");
 
-                    b.Property<short?>("is_active")
+                    b.Property<bool>("is_active")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("last_modified_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("modified_on")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<short>("status")
                         .HasColumnType("smallint");
 
                     b.Property<long?>("vehiclegroup_id")
@@ -105,7 +105,7 @@ namespace Campaign.Infrastructure.Migrations
 
                     b.HasKey("campaign_id");
 
-                    b.HasIndex("approver_id1");
+                    b.HasIndex("approver_id");
 
                     b.HasIndex("ecu_id");
 
@@ -123,29 +123,26 @@ namespace Campaign.Infrastructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp without time zone");
-
                     b.Property<long?>("ECUTypeecu_type_id")
                         .HasColumnType("bigint");
 
-                    b.Property<long?>("LastModifiedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int>("blocks")
+                        .HasColumnType("integer");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<string>("created_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("created_on")
                         .HasColumnType("timestamp without time zone");
-
-                    b.Property<long?>("blocks")
-                        .HasColumnType("bigint");
 
                     b.Property<string>("ecu_model")
                         .HasColumnType("text");
 
-                    b.Property<long>("ecu_type_id")
-                        .HasColumnType("bigint");
+                    b.Property<string>("last_modified_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("modified_on")
+                        .HasColumnType("timestamp without time zone");
 
                     b.HasKey("ecu_id");
 
@@ -161,24 +158,54 @@ namespace Campaign.Infrastructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<string>("created_by")
+                        .HasColumnType("text");
 
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<long?>("LastModifiedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("created_on")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("ecu_type_name")
                         .HasColumnType("text");
 
+                    b.Property<string>("last_modified_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("modified_on")
+                        .HasColumnType("timestamp without time zone");
+
                     b.HasKey("ecu_type_id");
 
                     b.ToTable("ECUType");
+                });
+
+            modelBuilder.Entity("Campaign.Core.Entities.EmployeeModel", b =>
+                {
+                    b.Property<long>("employee_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("created_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("created_on")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("employee_name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("last_modified_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("modified_on")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.HasKey("employee_id");
+
+                    b.ToTable("EmployeeModel");
                 });
 
             modelBuilder.Entity("Campaign.Core.Entities.Firmware", b =>
@@ -188,31 +215,34 @@ namespace Campaign.Infrastructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<string>("created_by")
+                        .HasColumnType("text");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime>("created_on")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<long?>("LastModifiedBy")
-                        .HasColumnType("bigint");
+                    b.Property<string>("firmware_name")
+                        .HasColumnType("text");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<string>("last_modified_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("modified_on")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<string>("current_firmware_link")
+                    b.Property<string>("newFirmwareZipName")
                         .HasColumnType("text");
 
-                    b.Property<string>("current_firmware_version")
+                    b.Property<string>("new_firmware_link")
                         .HasColumnType("text");
 
-                    b.Property<string>("firmware_Name")
+                    b.Property<string>("new_firmware_version")
                         .HasColumnType("text");
 
-                    b.Property<string>("previous_firmware_link")
+                    b.Property<string>("old_firmware_link")
                         .HasColumnType("text");
 
-                    b.Property<string>("previous_firmware_version")
+                    b.Property<string>("old_firmware_version")
                         .HasColumnType("text");
 
                     b.HasKey("firmware_id");
@@ -227,16 +257,10 @@ namespace Campaign.Infrastructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<string>("created_by")
+                        .HasColumnType("text");
 
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<long?>("LastModifiedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("created_on")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("data_origin")
@@ -245,14 +269,20 @@ namespace Campaign.Infrastructure.Migrations
                     b.Property<long?>("ecu_id")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("last_modified_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("modified_on")
+                        .HasColumnType("timestamp without time zone");
+
                     b.Property<string>("vehicle_model")
                         .HasColumnType("text");
 
                     b.Property<string>("vehicle_registration_number")
                         .HasColumnType("text");
 
-                    b.Property<long>("vehicle_year")
-                        .HasColumnType("bigint");
+                    b.Property<int>("vehicle_year")
+                        .HasColumnType("integer");
 
                     b.HasKey("vehicle_id");
 
@@ -268,20 +298,20 @@ namespace Campaign.Infrastructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<string>("created_by")
+                        .HasColumnType("text");
 
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<long?>("LastModifiedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("created_on")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<long>("ecu_id")
                         .HasColumnType("bigint");
+
+                    b.Property<string>("last_modified_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("modified_on")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<long>("vehicle_id")
                         .HasColumnType("bigint");
@@ -298,20 +328,20 @@ namespace Campaign.Infrastructure.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn);
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<long?>("LastModifiedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("ModifiedOn")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<string>("VehicleGroupName")
+                    b.Property<string>("Vehiclegroup_name")
                         .HasColumnType("text");
+
+                    b.Property<string>("created_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("created_on")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("last_modified_by")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("modified_on")
+                        .HasColumnType("timestamp without time zone");
 
                     b.HasKey("vehiclegroup_id");
 
@@ -320,9 +350,9 @@ namespace Campaign.Infrastructure.Migrations
 
             modelBuilder.Entity("Campaign.Core.Entities.Campaign", b =>
                 {
-                    b.HasOne("Campaign.Core.Entities.Approver", "approver")
-                        .WithMany()
-                        .HasForeignKey("approver_id1");
+                    b.HasOne("Campaign.Core.Entities.Approver", "Approver")
+                        .WithMany("Campaign")
+                        .HasForeignKey("approver_id");
 
                     b.HasOne("Campaign.Core.Entities.ECU", "ECU")
                         .WithMany("Campaign")

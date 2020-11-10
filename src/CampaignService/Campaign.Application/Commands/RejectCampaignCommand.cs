@@ -12,7 +12,7 @@ namespace Campaign.Application.Commands
 {
     public class RejectCampaignCommand : IRequest<int>
     {
-       public int campaign_id { get; set; }
+       public long campaign_id { get; set; }
        public string campaign_name  { get; set; }
        public string campaign_desc  { get; set; }
 

@@ -44,6 +44,8 @@ namespace Campaign.Infrastructure.Data
          public DbSet<Vehicle> Vehicle { get; set; }
          public DbSet<VehicleECU> VehicleECU { get; set; }
      public DbSet<VehicleGroup> VehicleGroup { get; set; }
+     public DbSet<EmployeeModel> EmployeeModel { get; set; }
+     
 
 //         public CampaignContext() { }
 //  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>

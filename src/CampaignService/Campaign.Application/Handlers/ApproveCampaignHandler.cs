@@ -30,9 +30,16 @@ namespace Campaign.Application.Handlers
     {
         var campaignEntity = CampaignMapper.Mapper.Map<Campaign.Core.Entities.Campaign>(request);
     var campaignInfo = await _campaignRepository.GetCampaignById(campaignEntity.campaign_id);
+    if (campaignInfo!= null)
+    {
     campaignInfo.status=3;
     await _campaignRepository.UpdateAsync(campaignInfo);
-    return campaignInfo.campaign_id;
+    
+    return Convert.ToInt32(campaignInfo.campaign_id);
+    }
+    else{
+        return 0;
+    }
     }
 
         

@@ -7,7 +7,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using System.Text;
 using System.Runtime.Serialization;
-
+using Microsoft.AspNetCore.Http;
 
 
 namespace Campaign.Core.Entities
@@ -18,15 +18,20 @@ namespace Campaign.Core.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long firmware_id { get; set; }
-        public string firmware_Name { get; set; }
-        public string current_firmware_version { get; set; }
-        public string current_firmware_link { get; set; }
-        public string previous_firmware_version { get; set; }
-        public string previous_firmware_link { get; set; }
+        public string firmware_name { get; set; }
+        public string new_firmware_version { get; set; }
+        public string new_firmware_link { get; set; }
+        public string old_firmware_version { get; set; }
+        public string old_firmware_link { get; set; }
         
 
         public ICollection<Campaign> Campaign {get;set;}
 
-        
+        public string newFirmwareZipName{get;set;}
+        [NotMapped]
+        public IFormFile newFirmwareZipFile{get;set;}
+
+        //[NotMapped]
+        //public IFormFile OldFirmwareFile{get;set;}
 }
 }

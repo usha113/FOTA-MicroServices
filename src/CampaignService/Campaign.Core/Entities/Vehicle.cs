@@ -16,7 +16,7 @@ namespace Campaign.Core.Entities
        [Key]
        public long vehicle_id { get; set; }
        public string vehicle_model  { get; set; }
-       public long vehicle_year  { get; set; }
+       public int vehicle_year  { get; set; }
        public string vehicle_registration_number  { get; set; }
        public string data_origin  { get; set; }
 

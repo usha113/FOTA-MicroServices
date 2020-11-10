@@ -30,7 +30,7 @@ namespace Campaign.Application.Handlers
         var campaignInfo = await _campaignRepository.GetCampaignById(campaignEntity.campaign_id);
     campaignInfo.status=4;
     await _campaignRepository.UpdateAsync(campaignInfo);
-    return campaignInfo.campaign_id;
+    return Convert.ToInt32(campaignInfo.campaign_id);
 
        }
 

@@ -64,10 +64,34 @@ namespace Campaign.Infrastructure.Repositories
     
         }
 
-         public async Task<Campaign.Core.Entities.Campaign> GetCampaignById(int id)
+         public async Task<Campaign.Core.Entities.Campaign> GetCampaignById(long id)
          {
              var campaign = await _dbContext.Campaign.FirstOrDefaultAsync(a=> a.campaign_id == id);
              return campaign;
+         }
+
+         public async Task<Campaign.Core.Entities.Firmware> GetFirmwareById(long id)
+         {
+             var firmware = await _dbContext.Firmware.FirstOrDefaultAsync(a=> a.firmware_id == id);
+             return firmware;
+         }
+
+         public async Task<Campaign.Core.Entities.VehicleGroup> GetVehiclegroupById(long id)
+         {
+             var vehiclegroup_id = await _dbContext.VehicleGroup.FirstOrDefaultAsync(a=> a.vehiclegroup_id == id);
+             return vehiclegroup_id;
+         }
+
+         public async Task<Campaign.Core.Entities.ECU> GetECUById(long id)
+         {
+             var ecu = await _dbContext.ECU.FirstOrDefaultAsync(a=> a.ecu_id == id);
+             return ecu;
+         }
+
+         public async Task<Campaign.Core.Entities.Approver> GetApproverById(long id)
+         {
+             var approver = await _dbContext.Approver.FirstOrDefaultAsync(a=> a.approver_id == id);
+             return approver;
          }
     }
 }

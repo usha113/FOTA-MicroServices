@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace User.Infrastructure.Helper
+namespace Campaign.Application.Helper
 {
     /// <summary>
     /// Global Application Settings

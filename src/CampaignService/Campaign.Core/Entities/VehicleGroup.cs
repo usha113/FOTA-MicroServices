@@ -14,7 +14,7 @@ namespace Campaign.Core.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long vehiclegroup_id { get; set; }
     
-        public string VehicleGroupName { get; set; }
+        public string Vehiclegroup_name { get; set; }
         public  ICollection<Campaign> Campaign {get;set;}
     }
 }

@@ -23,18 +23,38 @@ namespace Campaign.Application.Commands
     //    }
         
        //public long campaign_id { get;  }
-       public string campaign_name  { get; }
-       public string campaign_desc  { get; }
+
+           //public long campaign_id { get;  }
+
+    //    public CampaignRequest campaignRequest{get;set;}
+    //    public InitiateCampaignCommand(CampaignRequest campaignRequest)
+    //    {
+    //        this.campaignRequest= campaignRequest;
+    //    }
+       
+       public string campaign_name  { get; set;}
+       public string campaign_desc  { get; set; }
 
 
        
-       public DateTime campaign_start_date { get; }
-       public DateTime campaign_end_date { get; }
-       public short is_active { get;}
-       public short status { get; }
+       public DateTime campaign_start_date { get;set; }
+       public DateTime campaign_end_date { get; set;}
+       public bool is_active { get;set;}
+       public short status { get;set; }
 
-       
+        public long approver_id { get; set;}
+       public long vehiclegroup_id { get; set;}
+       public Firmware firmware { get; set;}
+       public long ecu_id { get; set;}
+       public DateTime approval_date { get; set;}
+       public short approval_status { get; set;}
 
+        // public string firmware_name { get; set; }
+        // public string current_firmware_version { get; set; }
+        // public string current_firmware_link { get; set; }
+        // public string previous_firmware_version { get; set; }
+        // public string previous_firmware_link { get; set; }
+        
 
 
     }

@@ -11,7 +11,14 @@ namespace Campaign.Core.Repositories
     public interface ICampaignRepository : IRepository<Campaign.Core.Entities.Campaign>
  {    
          Task<IEnumerable<Campaign.Core.Entities.Campaign>> GetCampaigns();
-         Task<Campaign.Core.Entities.Campaign> GetCampaignById(int id);
+         Task<Campaign.Core.Entities.Campaign> GetCampaignById(long id);
+
+         Task<Campaign.Core.Entities.VehicleGroup> GetVehiclegroupById(long id);
+
+         Task<Campaign.Core.Entities.Firmware> GetFirmwareById(long id);
+
+         Task<Campaign.Core.Entities.ECU> GetECUById(long id);
+         Task<Campaign.Core.Entities.Approver> GetApproverById(long id);
 
         // Task InitiateCampaign(Campaign.Core.Entities.Campaign campaign);
 

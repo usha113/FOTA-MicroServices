@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2A8+Rvitpzyw7WFOHZdYJSL42bv3Bv3R1diezKLmM5LHWyKHDwqMi4e1JHr+1aLZGM8Vk7H1UvU4fMqXggZqGw==",
+  "dgSpecHash": "eekCFkqoGlUVrOTkkQE0LbrOobRMmmTrpUrCl8vzRL93Hj/5b8BEX7/QeKfBGi2PCIsfFDm6w8bIzhlIe2bPXA==",
   "success": true,
   "projectFilePath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\AccountService\\User.Core\\User.Core.csproj",
   "expectedPackageFiles": [

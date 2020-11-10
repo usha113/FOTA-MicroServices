@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hYZs5AgUK52T1lDOqvpsDWws98HJsv1c9uU6sdjkIztuXQrnXvlJF5M41OQl0XB6iX3udJeQAawVzHOECgBASw==",
+  "dgSpecHash": "6O/J/68rKDLmfbrUyXL7HoWyWpfpxCL3N70JbMd7RL4jGel/+thBAufeE5YxhZ6Bh6MhaaqRgwSxQgVkJ33kdg==",
   "success": true,
-  "projectFilePath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj",
+  "projectFilePath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\z0051621\\.nuget\\packages\\awssdk.core\\3.5.1.32\\awssdk.core.3.5.1.32.nupkg.sha512",
+    "C:\\Users\\z0051621\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.3.101\\awssdk.extensions.netcore.setup.3.3.101.nupkg.sha512",
+    "C:\\Users\\z0051621\\.nuget\\packages\\awssdk.s3\\3.5.3.10\\awssdk.s3.3.5.3.10.nupkg.sha512",
     "C:\\Users\\z0051621\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\z0051621\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\z0051621\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",

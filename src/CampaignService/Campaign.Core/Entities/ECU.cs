@@ -22,11 +22,11 @@ namespace Campaign.Core.Entities
     public string ecu_model { get; set; }
 
            
-    public long ecu_type_id{get;set;}
+    
     public ECUType ECUType{get ; set;}
 
     
-    public long? blocks { get; set; }
+    public int blocks { get; set; }
 
     public virtual ICollection<Vehicle> Vehicles {get;set;}
     

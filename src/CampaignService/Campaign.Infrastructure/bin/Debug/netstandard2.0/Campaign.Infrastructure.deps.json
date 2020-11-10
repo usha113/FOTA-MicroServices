@@ -9,6 +9,8 @@
     ".NETStandard,Version=v2.0/": {
       "Campaign.Infrastructure/1.0.0": {
         "dependencies": {
+          "AWSSDK.Extensions.NETCore.Setup": "3.3.101",
+          "AWSSDK.S3": "3.5.3.10",
           "Campaign.Core": "1.0.0",
           "Microsoft.Bcl.HashCode": "1.1.0",
           "Microsoft.EntityFrameworkCore": "3.1.8",
@@ -24,6 +26,42 @@
         },
         "runtime": {
           "Campaign.Infrastructure.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.5.1.32": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.5.1.32"
+          }
+        }
+      },
+      "AWSSDK.Extensions.NETCore.Setup/3.3.101": {
+        "dependencies": {
+          "AWSSDK.Core": "3.5.1.32",
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.8",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.8",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.8"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.100.0"
+          }
+        }
+      },
+      "AWSSDK.S3/3.5.3.10": {
+        "dependencies": {
+          "AWSSDK.Core": "3.5.1.32"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.5.3.10"
+          }
         }
       },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -1083,6 +1121,8 @@
       "System.ValueTuple/4.5.0": {},
       "Campaign.Core/1.0.0": {
         "dependencies": {
+          "AWSSDK.Extensions.NETCore.Setup": "3.3.101",
+          "AWSSDK.S3": "3.5.3.10",
           "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0",
           "Newtonsoft.Json": "12.0.3",
           "System.Linq": "4.3.0"
@@ -1098,6 +1138,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.5.1.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rNxli5HjbQdFmibqHQhXgOtIS35A8Gt6k8XWyJAse/QoChfbsTqXjzKnws24DMUVK3dzf3knpD1mgpXS9XJ1zA==",
+      "path": "awssdk.core/3.5.1.32",
+      "hashPath": "awssdk.core.3.5.1.32.nupkg.sha512"
+    },
+    "AWSSDK.Extensions.NETCore.Setup/3.3.101": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mbFGOX62zG4A/0bIhKy+I3NmNBAwSCKClFl+Y6RzuRj+0cQDBbmH33JMe8x3SWizhoyl+ATm2ldOR1phIFTGvA==",
+      "path": "awssdk.extensions.netcore.setup/3.3.101",
+      "hashPath": "awssdk.extensions.netcore.setup.3.3.101.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.5.3.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sZaTgpV+DikPGsuVNBhXor7ludhWA3m/KveR7l07nA3hUwgkxQnJFJfTpa0T2k+C0eKLTQC4l5dA/mK6RmCcFw==",
+      "path": "awssdk.s3/3.5.3.10",
+      "hashPath": "awssdk.s3.3.5.3.10.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
       "type": "package",

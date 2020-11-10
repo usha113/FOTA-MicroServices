@@ -6,10 +6,11 @@ namespace Campaign.Core.Entities.Base
 {
     public interface IEntityBase<TId>
     {
-          long? CreatedBy { get; set; }
-         DateTime CreatedOn { get; set; }
-         long? LastModifiedBy { get; set; }
-         DateTime ModifiedOn { get; set; }
+         
 
+   string created_by { get; set; }
+         DateTime created_on { get; set; }
+         string last_modified_by { get; set; }
+         DateTime modified_on { get; set; }
     }
 }

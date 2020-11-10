@@ -67,3 +67,9 @@ D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.API\obj\
 D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
 D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.API\bin\Debug\netcoreapp3.1\Campaign.Application.dll
 D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.API\bin\Debug\netcoreapp3.1\Campaign.Application.pdb
+D:\ProjectRepos\fotaapi\FOTA-Microservices\src\CampaignService\Campaign.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\ProjectRepos\fotaapi\FOTA-Microservices\src\CampaignService\Campaign.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\ProjectRepos\fotaapi\FOTA-Microservices\src\CampaignService\Campaign.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.API\bin\Debug\netcoreapp3.1\AWSSDK.Core.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.API\bin\Debug\netcoreapp3.1\AWSSDK.Extensions.NETCore.Setup.dll
+D:\ProjectRepos\fotaapi\FOTA-MicroServices\src\CampaignService\Campaign.API\bin\Debug\netcoreapp3.1\AWSSDK.S3.dll

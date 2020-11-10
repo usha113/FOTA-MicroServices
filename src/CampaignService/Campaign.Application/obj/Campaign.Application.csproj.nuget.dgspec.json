@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Application\\Campaign.Application.csproj": {}
+    "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Application\\Campaign.Application.csproj": {}
   },
   "projects": {
-    "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Application\\Campaign.Application.csproj": {
+    "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Application\\Campaign.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Application\\Campaign.Application.csproj",
+        "projectUniqueName": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Application\\Campaign.Application.csproj",
         "projectName": "Campaign.Application",
-        "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Application\\Campaign.Application.csproj",
+        "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Application\\Campaign.Application.csproj",
         "packagesPath": "C:\\Users\\z0051621\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Application\\obj\\",
+        "outputPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\z0051621\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -32,11 +30,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Core\\Campaign.Core.csproj": {
-                "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Core\\Campaign.Core.csproj"
+              "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Core\\Campaign.Core.csproj": {
+                "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Core\\Campaign.Core.csproj"
               },
-              "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj": {
-                "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj"
+              "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj": {
+                "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj"
               }
             }
           }
@@ -50,6 +48,14 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[3.3.101, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.5.3.10, )"
+            },
             "AutoMapper": {
               "target": "Package",
               "version": "[10.1.1, )"
@@ -61,6 +67,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[8.1.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
@@ -91,23 +101,21 @@
         }
       }
     },
-    "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Core\\Campaign.Core.csproj": {
+    "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Core\\Campaign.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Core\\Campaign.Core.csproj",
+        "projectUniqueName": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Core\\Campaign.Core.csproj",
         "projectName": "Campaign.Core",
-        "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Core\\Campaign.Core.csproj",
+        "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Core\\Campaign.Core.csproj",
         "packagesPath": "C:\\Users\\z0051621\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Core\\obj\\",
+        "outputPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\z0051621\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -130,6 +138,14 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[3.3.101, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.5.3.10, )"
+            },
             "Microsoft.AspNetCore.Mvc.DataAnnotations": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -163,23 +179,21 @@
         }
       }
     },
-    "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj": {
+    "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj",
+        "projectUniqueName": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj",
         "projectName": "Campaign.Infrastructure",
-        "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj",
+        "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Infrastructure\\Campaign.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\z0051621\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Infrastructure\\obj\\",
+        "outputPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\z0051621\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -191,8 +205,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Core\\Campaign.Core.csproj": {
-                "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\Campaignservice\\Campaign.Core\\Campaign.Core.csproj"
+              "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Core\\Campaign.Core.csproj": {
+                "projectPath": "D:\\ProjectRepos\\fotaapi\\FOTA-MicroServices\\src\\CampaignService\\Campaign.Core\\Campaign.Core.csproj"
               }
             }
           }
@@ -206,6 +220,14 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[3.3.101, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.5.3.10, )"
+            },
             "Microsoft.Bcl.HashCode": {
               "target": "Package",
               "version": "[1.1.0, )"
